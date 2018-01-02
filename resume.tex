@@ -1,0 +1,245 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+\RequirePackage{fix-cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Young}{Guo}{\urlstyle{same}\url{https://oldguo.github.io} \\
+\href{mailto:young.guo@berkeley.edu}{young.guo@berkeley.edu} | 408-693-7904 \\ 2035 Channing Way 103 | Berkeley, California 94720 – 2274
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{UC Berkeley}
+\descript{B.A. Computer Science}
+\location{Expected May 2019 | Berkeley, CA \\ GPA\@: 3.73 / 4.0}
+\sectionsep{}
+
+
+\subsection{Monta Vista High School}
+\location{Grad. June 2015 |  Cupertino, CA \\ Cum. GPA\@: 3.96 / 4.0\\SAT\@: 2390}
+
+\sectionsep{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+\textbf{CS61A}: Structure and Interpretation of Computer Programming\\
+\textbf{MATH54}: Linear Algebra and Differential Equations\\
+\textbf{CS61B}: Data Structures\\
+\textbf{CS70}: Discrete Mathematics and Probability Theory\\
+\textbf{CS61C}: Machine Structures\\
+\textbf{CS188}: Artificial Intelligence\\
+\textbf{CS186}: Database Systems\\
+\textbf{CS195}: Social Implications of Computing\\
+\textbf{CS162}: Operating Systems and Systems Programming\\
+\textbf{CS170}: Efficient Algorithms and Intractable Problems\\
+\textbf{CS168}: Introduction to the Internet: Architecture and Protocols\\
+\textbf{CS161}*: Computer Security\\
+\textbf{CS164}*: Programming Languages and Compilers
+
+\sectionsep{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Java \textbullet{} C \textbullet{} Python \textbullet{} Swift \textbullet{} SQL\\
+HTML/CSS/JavaScript \textbullet{} Rails \textbullet{} Django\\
+Docker \textbullet{} Kubernetes \textbullet{} Helm \textbullet{} Jenkins\\
+Git \textbullet{} Vim
+\sectionsep{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+Github: \href{https://github.com/oldguo}{\textbf{github.com/oldguo}} \\
+LinkedIn: \href{https://linkedin.com/in/youngguo}{\textbf{linkedin.com/in/youngguo}} \\
+Portfolio: \href{https://oldguo.github.io/}{\textbf{oldguo.github.io}}
+\sectionsep{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Stripe}
+\descript{| Software Engineer Intern}
+\location{May 2018 – August 2018 | San Francisco, CA}
+\vspace{\topsep}
+\begin{tightemize}
+  \item Incoming Summer 2018
+\end{tightemize}
+
+\sectionsep{}
+\runsubsection{Workday}
+\descript{| Software Development Engineer Intern}
+\location{May 2017 – August 2017 | Pleasanton, CA}
+\begin{tightemize}
+  \item Implement fully customized Jenkins Helm Chart on Kubernetes clusters
+  \item Leverage Arquillian Cube for integration tests in Kubernetes environments
+  \item Integrate Kubernetes/Docker pipelines into current bare metal based CI
+\end{tightemize}
+\sectionsep{}
+
+\runsubsection{CodeBase}
+\descript{| Project Manager }
+\location{February 2017 – Present | Berkeley, CA}
+\begin{tightemize}
+    \item Student organization that provides software solutions for startups
+    \item Develop NLP slackbot for developer sourcing startup, Crowdbotics
+    \item Build out AWS infrastructure for AI-driven healthcare startup, YiTuuX
+\end{tightemize}
+\sectionsep{}
+
+\runsubsection{Wrevie}
+\descript{| Software Engineering Intern }
+\location{May 2016 – June 2016 | Sunnyvale, CA}
+\begin{tightemize}
+  \item Work with scikit-learn and lda machine learning libraries to conduct sentiment analysis within the E-Commerce sector
+  \item Create data parser and formatter for review model training data
+  \item Conduct research on various topic-modeling approaches
+\end{tightemize}
+\sectionsep{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{Haven}
+\descript{| An Anonymous Social Network for iOS}
+\location{June 2017 – Present}
+\begin{tightemize}
+    \item Swift/Firebase
+    \item Lead backend team development using Firebase NoSQL database
+    \item Implement question/answer, voting, and chat functionality
+\end{tightemize}
+\sectionsep{}
+
+\runsubsection{Ship}
+\descript{| An online matchmaking-driven dating application}
+\location{CalHacks 3.0 – November 2016}
+\begin{tightemize}
+  \item HTML/CSS/React.js/Node.js/Rails
+  \item Implement unique matchmaking system and ship algorithms
+  \item Integrate Facebook Graph API for account management
+\end{tightemize}
+\sectionsep{}
+
+\runsubsection{Craftnet}
+\descript{| A social marketplace for artistic entrepreneurs}
+\location{October 2014 – February 2015}
+\begin{tightemize}
+  \item HTML/CSS/JavaScript/Django
+  \item Implement user account, item listing, and shopping cart functionality
+  \item Develop search/filtering algorithms, user follower system, and ratings/reviews integration
+\end{tightemize}
+\sectionsep{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+\begin{tabular}{rll}
+2018 & National & UC Berkeley Regents' and Chancellors Scholarship\\
+2015 & 4\textsuperscript{th} – State & FBLA E-Business Programming\\
+2014 & 1\textsuperscript{st} – State & FBLA Desktop Application Programming\\
+2013 & 1\textsuperscript{st} – State & FBLA Computer Game and Simulation Programming
+\end{tabular}
+\sectionsep{}
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
